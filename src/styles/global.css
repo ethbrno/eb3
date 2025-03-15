@@ -23,10 +23,6 @@ a:hover {
     @apply no-underline;
 }
 
-a:visited {
-    @apply text-red-800;
-}
-
 h2 {
     @apply font-bold mt-8;
 }
@@ -36,5 +32,5 @@ h2::before {
 }
 
 .eb-invert {
-    @apply bg-black text-white inline-block py-0.5 px-1 -rotate-1 lg:-mx-4;
+    @apply bg-black text-white inline-block py-2 px-3 lg:-mx-4 -rotate-1;
 }
