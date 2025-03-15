@@ -34,3 +34,7 @@ h2 {
 h2::before {
     content: ">> ";
 }
+
+.eb-invert {
+    @apply bg-black text-white inline-block py-0.5 px-1 -rotate-1 lg:-mx-4;
+}

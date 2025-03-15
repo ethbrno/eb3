@@ -26,9 +26,9 @@ const data = {
 ---
 
 <Layout>
-	<h1 class="text-3xl py-1 px-2 bg-black text-white inline-block -rotate-2">⟠ ETHBrno×3</h1>
+	<h1 class="text-3xl py-1 px-2 bg-black text-white inline-block -rotate-2 lg:-m-4">⟠ ETHBrno×3</h1>
 
-	<p class="mt-6">
+	<p class="mt-8">
 		<b>17-19 October 2025*</b> @ <a href="https://en.wikipedia.org/wiki/Brno">Brno, Czech Republic</a>
 	</p>
 
@@ -113,6 +113,10 @@ const data = {
 			<li><a href={url}>{title}</a> {caption ? ` (${caption})` : ""}</li>
 		))}
 	</ul>
+
+	<div class="eb-invert mt-10">
+		"The computer can be used as a tool to liberate and protect people, rather than to control them." — Hal Finney
+	</div>
 
 	<p class="mt-12 text-xs pt-6 border-t-1 border-t-black/25">
 		<a href="https://github.com/ethbrno/eb3/blob/main/src/pages/index.astro">Source code</a> | Generated: <i>{new Date().toISOString()}</i>
