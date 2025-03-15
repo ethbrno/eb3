@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+body {
+}
+
+a {
+    @apply underline;
+}
+
+a.inactive {
+    @apply line-through;
+}
+
+a:hover {
+    @apply no-underline;
+}
+
+a:visited {
+    @apply text-red-800;
+}
+
+h2 {
+    @apply font-bold mt-8;
+}
+
+h2::before {
+    content: ">> ";
+}
