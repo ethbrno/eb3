@@ -11,6 +11,14 @@ a.inactive {
     @apply line-through;
 }
 
+a.inactive:visited {
+    @apply text-black;
+}
+
+a.inactive:hover {
+    @apply line-through;
+}
+
 a:hover {
     @apply no-underline;
 }
