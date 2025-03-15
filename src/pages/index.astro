@@ -1,11 +1,121 @@
 ---
-import Homepage from '../components/Homepage.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const data = {
+	partners: [
+		["Web3Privacy Now", "https://web3privacy.info"],
+		["Gwei.cz", "https://gwei.cz"],
+		["PP0", "https://parallelpolis.info/"],
+	],
+	mentors: [
+		["Nick Almond", "https://x.com/DrNickA", "FactoryDAO"],
+		["Mykola Siusko", "https://x.com/nicksvyaznoy", "Web3Privacy Now"],
+		["PG", "https://x.com/PG_CDG", "Web3Privacy Now"],
+	],
+	team: [
+		["Tree", "https://bsky.app/profile/tree.fail", "coordination"],
+		["Coinmandeer", "https://coinmandeer.com/", "visual identity"]
+	],
+	social: [
+		["Bluesky", "https://bsky.app/profile/ethbrno.cz"],
+		["X", "https://x.com/ETHBrno"],
+		["Mirror", "https://mirror.xyz/ethbrno.eth"],
+		["GitHub", "https://github.com/ethbrno"],
+	]
+}
 ---
 
 <Layout>
-	<Homepage />
+	<h1 class="text-3xl">ETHBrno×3</h1>
+	<div class="">-----------------</div>
+
+	<p class="mt-4">
+		<b>17-19 October 2025*</b> @ <a href="https://en.wikipedia.org/wiki/Brno">Brno, Czech Republic</a>
+	</p>
+
+	<p class="mt-4">
+		A <i>three-day in-person hackathon</i> for builders and privacy advocates collaborating on sovereign tools aligned with <a href="https://ethereum.org">Ethereum</a>'s original principles of decentralization and freedom.
+	</p>
+
+	<p class="mt-4 text-xs opacity-75">
+		*The date may still change. Final date will be available with the opening of registrations for participants during April 2025.
+	</p>
+
+	<!--p class="mt-2">
+		⎯ part of <a href="#">Distributed Roots I.</a> festival
+	</p-->
+
+	<h2>The Hackathon</h2>
+	<p class="mt-4">
+		Uniting 150 hackers in a sponsor-free environment. Instead of corporate-directed prizes, we will offer general awards based solely on innovation and alignment with sovereignty principles.
+	</p>
+	<p class="mt-4">
+		Our intention is to create a comfortable, family-like hacking experience with a fully equipped <a href="#venue">venue</a>, provided meals, and guidance from veteran <a href="#mentors">mentors</a> — where every participant shapes the event's character while enjoying the freedom to create what truly matters.
+	</p>
+
+	<p  class="mt-4">
+		<a class="inactive" href="#">Join the hackathon</a> (registration will open during April 2025)
+	</p>
+
+	<h2>What we hack?</h2>
+	<ul class="mt-4 space-y-4">
+		<li></li>
+		<li><i>* Sovereign Development</i> - Open-source tools for code collaboration, testing, and deployment without centralized gatekeepers</li>
+		<li><i>* Sovereign Data</i> - Self-hosted explorers, indexers, and analytics tools for accessing blockchain data without intermediaries and surveillance</li>
+		<li><i>* Sovereign Communities</i> - Decentralized infrastructure for privacy-preserving communication, coordination, and payments</li>
+	</ul>
+
+	<h2 id="venue">Venue</h2>
+	<p class="mt-4">
+		The main venue will be <a href="https://www.hubbrno.cz/en/">Impact Hub Brno</a>, a fully equipped co-working space located few minutes walk from the city centre and main train station, available to hackers 24/7 throughout the event.
+	</p>
+
+	<!--h2>Hacker Manual</h2>
+	<p class="mt-4">
+		Will be available at end of April 2025.
+	</p-->
+
+	<h2 id="mentors">Mentors</h2>
+	<ul class="mt-4 space-y-1">
+		{data.mentors.map(([title, url, caption]) => (
+			<li>* <a href={url}>{title}</a> {caption ? ` (${caption})` : ""}</li>
+		))}
+	</ul>
+
+
+	<h2>Partners</h2>
+	<ul class="flex gap-x-4 gap-y-2 mt-4 flex-wrap">
+		{data.partners.map(([title, url]) => (
+			<li><a href={url}>{title}</a></li>
+		))}
+	</ul>
+	<p class="mt-4 italic">
+		We are looking for all another partners interested in the sovereign future of Ethereum. Please <a href="https://signal.me/#eu/08P5JDn8VtVDLDpFl0ihILAxoYu0fNa7kEVimHlvbZTRiNQflwtNM5FbhCDG0BKJ">contact us</a> and help us make this hackathon happen!
+	</p>
+
+	<h2>About the Host</h2>
+	<p class="mt-4">
+		ETHBrno×3 is organized by the local Czech non-profit community <a href="https://gwei.cz">Gwei.cz</a> with the great support of the <a href="https://web3privacy.info">Web3Privacy Now</a> collective.
+	</p>
+
+	<h2>Team</h2>
+	<ul class="flex flex-wrap gap-4 mt-4">
+		{data.team.map(([title, url, caption]) => (
+			<li><a href={url}>{title}</a> {caption ? ` (${caption})` : ""}</li>
+		))}
+	</ul>
+	<p class="mt-4">
+		Contact: <a href="https://signal.me/#eu/08P5JDn8VtVDLDpFl0ihILAxoYu0fNa7kEVimHlvbZTRiNQflwtNM5FbhCDG0BKJ">@tree.21</a> on Signal messenger
+	</p>
+
+	<h2>Follow us</h2>
+	<ul class="flex flex-wrap gap-4 mt-4">
+		{data.social.map(([title, url, caption]) => (
+			<li><a href={url}>{title}</a> {caption ? ` (${caption})` : ""}</li>
+		))}
+	</ul>
+
+	<p class="mt-12 text-xs pt-6 border-t-1 border-t-black/25">
+		<a href="https://github.com/ethbrno/eb3/blob/main/src/pages/index.astro">Source code</a> | Generated: <i>{new Date().toISOString()}</i>
+	</p>
 </Layout>
