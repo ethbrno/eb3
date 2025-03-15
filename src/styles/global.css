@@ -8,7 +8,7 @@ a {
 }
 
 a.inactive {
-    @apply line-through;
+    @apply line-through text-black;
 }
 
 a.inactive:visited {
