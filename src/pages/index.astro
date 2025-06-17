@@ -67,6 +67,10 @@ const data = {
 		<div set:html={manifesto?.rendered.html} />
 	</div>
 
+	<div class="eb-invert mt-10 rotate-0.5">
+		<i>"We, the Ethereum Cypherpunks, stand united in our pursuit of a more private, secure, and censorship-resistant future."</i> - <a href="https://hackmd.io/@pcaversaccio/the-ethereum-cypherpunk-manifesto">⟠ Ethereum Cypherpunk Manifesto</a>
+	</div>
+
 	<h2 id="venue">Venue</h2>
 	<p class="mt-4">
 		Our intention is to create a comfortable, family-like hacking experience with a fully equipped venue, provided meals, and guidance from veteran <a href="#mentors">mentors</a> — where every participant shapes the event's character while enjoying the freedom to create what truly matters.
@@ -88,8 +92,7 @@ const data = {
 		<li>.. more mentors coming!</li>
 	</ul>
 
-
-	<h2>Partners</h2>
+	<h2>Collaborators</h2>
 	<ul class="flex gap-x-4 gap-y-2 mt-4 flex-wrap">
 		{data.partners.map(([title, url]) => (
 			<li><a href={url}>{title}</a></li>
