@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import { getEntry } from 'astro:content';
+const manifesto = await getEntry('docs', 'manifesto');
+
 const data = {
 	partners: [
 		["Web3Privacy Now", "https://web3privacy.info"],
@@ -9,6 +12,7 @@ const data = {
 	],
 	mentors: [
 		["Nick Almond", "https://x.com/DrNickA", "FactoryDAO"],
+		["Mario Havel", "https://x.com/TMIYChao", "Ethereum Protocol, Proof-of-Cat"],
 		["Mykola Siusko", "https://x.com/nicksvyaznoy", "Web3Privacy Now"],
 		["PG", "https://x.com/PG_CDG", "Web3Privacy Now"],
 	],
@@ -38,39 +42,35 @@ const data = {
 		A <b>three-day in-person hackathon</b> for builders and privacy advocates collaborating on sovereign tools aligned with ⟠ <a href="https://ethereum.org">Ethereum</a>'s original principles of decentralization and freedom.
 	</p>
 
-	<p class="mt-4 text-xs opacity-75">
-		*The date may still change. Final date will be available with the opening of registrations for participants during June 2025.
-	</p>
-
 	<!--p class="mt-2">
 		⎯ part of <a href="#">Distributed Roots I.</a> festival
 	</p-->
 
-	<h2>The Hackathon</h2>
-	<p class="mt-4">
-		Uniting 150 hackers in a sponsor-free environment. Instead of corporate-directed prizes, we will offer general awards based solely on innovation and alignment with sovereignty principles.
-	</p>
-	<p class="mt-4">
-		Our intention is to create a comfortable, family-like hacking experience with a fully equipped <a href="#venue">venue</a>, provided meals, and guidance from veteran <a href="#mentors">mentors</a> — where every participant shapes the event's character while enjoying the freedom to create what truly matters.
-	</p>
-
 	<p  class="mt-4">
 		<a class="inactive" href="#">Join the hackathon</a> (registration will open during June 2025)
+	</p>
+
+	<p class="mt-4 text-xs opacity-75">
+		*The date may still change. Final date will be available with the opening of registrations for participants during June 2025.
 	</p>
 
 	<h2>What we hack?</h2>
 	<ul class="mt-4 space-y-4">
 		<li></li>
 		<li>* <span class="eb-ibasic">Sovereign Development</span> - Open-source tools for code collaboration, testing, and deployment without centralized gatekeepers</li>
-		<li>* <span class="eb-ibasic">Sovereign Data</span> - Self-hosted explorers, indexers, and analytics tools for accessing blockchain data without intermediaries and surveillance</li>
 		<li>* <span class="eb-ibasic">Sovereign Communities</span> - Decentralized infrastructure for privacy-preserving communication, coordination, and payments</li>
+		<li>* <span class="eb-ibasic">Sovereign Data</span> - Self-hosted explorers, indexers, and analytics tools for accessing blockchain data without intermediaries and surveillance</li>
 	</ul>
 
-	<div class="eb-invert mt-10 rotate-0.5">
-		<i>"We, the Ethereum Cypherpunks, stand united in our pursuit of a more private, secure, and censorship-resistant future."</i> - <a href="https://hackmd.io/@pcaversaccio/the-ethereum-cypherpunk-manifesto">⟠ Ethereum Cypherpunk Manifesto</a>
+	<h2>Manifesto</h2>
+	<div class="mt-4 text">
+		<div set:html={manifesto?.rendered.html} />
 	</div>
 
 	<h2 id="venue">Venue</h2>
+	<p class="mt-4">
+		Our intention is to create a comfortable, family-like hacking experience with a fully equipped venue, provided meals, and guidance from veteran <a href="#mentors">mentors</a> — where every participant shapes the event's character while enjoying the freedom to create what truly matters.
+	</p>
 	<p class="mt-4">
 		The main venue will be <a href="https://www.hubbrno.cz/en/">Impact Hub Brno</a>, a fully equipped co-working space located few minutes walk from the city centre and main train station, available to hackers 24/7 throughout the event.
 	</p>

@@ -42,3 +42,7 @@ h2::before {
 .eb-invert a:hover {
     @apply text-red-200;
 }
+
+.text p {
+    @apply mt-3;
+}
