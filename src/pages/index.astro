@@ -5,12 +5,12 @@ import { getEntry } from 'astro:content';
 const manifesto = await getEntry('docs', 'manifesto');
 
 const data = {
-	partners: [
+	collaborators: [
 		["Web3Privacy Now", "https://web3privacy.info"],
 		["Gwei.cz", "https://gwei.cz"],
 		["PP0", "https://parallelpolis.info/"],
 	],
-	mentors: [
+	contributors: [
 		["Nick Almond", "https://x.com/DrNickA", "FactoryDAO"],
 		["Mario Havel", "https://x.com/TMIYChao", "Ethereum Protocol, Proof-of-Cat"],
 		["Mykola Siusko", "https://x.com/nicksvyaznoy", "Web3Privacy Now"],
@@ -73,7 +73,7 @@ const data = {
 
 	<h2 id="venue">Venue</h2>
 	<p class="mt-4">
-		Our intention is to create a comfortable, family-like hacking experience with a fully equipped venue, provided meals, and guidance from veteran <a href="#mentors">mentors</a> — where every participant shapes the event's character while enjoying the freedom to create what truly matters.
+		Our intention is to create a comfortable, family-like hacking experience for 150 extraordinary people with a fully equipped venue, provided meals, and guidance from veteran <a href="#contributors">contributors</a> — where every participant shapes the event's character while enjoying the freedom to create what truly matters.
 	</p>
 	<p class="mt-4">
 		The main venue will be <a href="https://www.hubbrno.cz/en/">Impact Hub Brno</a>, a fully equipped co-working space located few minutes walk from the city centre and main train station, available to hackers 24/7 throughout the event.
@@ -84,22 +84,22 @@ const data = {
 		Will be available at end of June 2025.
 	</p-->
 
-	<h2 id="mentors">Mentors</h2>
+	<h2 id="contributors">Contributors</h2>
 	<ul class="mt-4 space-y-1">
-		{data.mentors.map(([title, url, caption]) => (
+		{data.contributors.map(([title, url, caption]) => (
 			<li>* <a href={url}>{title}</a> {caption ? ` (${caption})` : ""}</li>
 		))}
-		<li>.. more mentors coming!</li>
+		<li>.. more contributors coming!</li>
 	</ul>
 
 	<h2>Collaborators</h2>
 	<ul class="flex gap-x-4 gap-y-2 mt-4 flex-wrap">
-		{data.partners.map(([title, url]) => (
+		{data.collaborators.map(([title, url]) => (
 			<li><a href={url}>{title}</a></li>
 		))}
 	</ul>
 	<p class="mt-4 italic">
-		We are looking for partners interested in the sovereign future of Ethereum. Please <a href="https://signal.me/#eu/08P5JDn8VtVDLDpFl0ihILAxoYu0fNa7kEVimHlvbZTRiNQflwtNM5FbhCDG0BKJ">contact us</a> and help us make this hackathon happen!
+		We are looking for subjects interested in the sovereign future of Ethereum. Please <a href="https://signal.me/#eu/08P5JDn8VtVDLDpFl0ihILAxoYu0fNa7kEVimHlvbZTRiNQflwtNM5FbhCDG0BKJ">contact us</a> and help us make this hackathon happen!
 	</p>
 
 	<h2>About the Host</h2>
