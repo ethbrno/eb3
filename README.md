@@ -1,3 +1,3 @@
-# ETHBrno×3 (2025) web
+# ETHBrno×3 (2026?) web
 
 https://ethbrno.cz/
